@@ -14,7 +14,7 @@ return Scaffold(
    appBar: AppBar(
       title: const Text('Add todo'),
       backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-  ), //AppBar
+  ), 
   body: Padding(
     padding: const EdgeInsets.all(16.0),
       child: TextField(
@@ -23,9 +23,9 @@ return Scaffold(
         },
         decoration: InputDecoration(
            labelText: 'What todo',
-        ), // InputDecoration
-      ), // TextField
-    ), // Padding
+        ), 
+      ),
+    ),
   floatingActionButton: FloatingActionButton(
      onPressed: () {
          taskHandler.addTask(taskTitle);
@@ -33,7 +33,7 @@ return Scaffold(
      },
      tooltip: 'Done',
      child: const Icon(Icons.done),
- ), // FloatingActionButton
-); // Scaffold
+ ), 
+);
 }
 }
