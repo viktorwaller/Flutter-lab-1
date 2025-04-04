@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lab1/model/task_handler.dart';
 import 'package:lab1/widgets/delete_button.dart';
 import 'package:lab1/widgets/status_icon.dart';
+import 'package:lab1/widgets/title_text.dart';
 import 'package:provider/provider.dart';
 
 class TaskList extends StatelessWidget {
@@ -20,7 +21,7 @@ class TaskList extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
           child: ListTile(
             leading: StatusIcon(task),
-            title: Text(task.title),
+            title: TitleText(task),
             onTap: (){taskHandler.toggleTask(task);},
             trailing: DeleteButton(
               onPressed: () {taskHandler.deleteTask(task);},
