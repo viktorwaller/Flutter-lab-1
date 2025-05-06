@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
  // Common spacing
@@ -13,4 +14,7 @@ class AppTheme {
   static ColorScheme colorScheme = ColorScheme.fromSeed(
            seedColor: Colors.green,     
    );
+
+
+  static TextTheme textTheme = GoogleFonts.nunitoTextTheme();
 }

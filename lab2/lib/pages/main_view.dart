@@ -28,18 +28,9 @@ Widget _controlPanel(context, {double width = 320}) {
       children: [
         Text('Receptsök'),
         Text('Sök efter recept'),
-        Row(
-          children: [
-            Text("Ingrediens"),
-            IngredientControl()
-          ],),
-        Row(
-          children: [
-            Text("Kök"),
-            KitchenControl()
-          ],
-        ),
-
+       
+        IngredientControl(),
+        KitchenControl(),
         Text("Svårighet"),
         DifficulyControl(),
         Row(
