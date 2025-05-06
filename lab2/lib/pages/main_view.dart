@@ -4,6 +4,7 @@ import 'package:lab2/util/cuisine.dart';
 import 'package:lab2/widgets/difficulty_control.dart';
 import 'package:lab2/widgets/ingredient_control.dart';
 import 'package:lab2/widgets/kitchen_control.dart';
+import 'package:lab2/widgets/logo.dart';
 import 'package:lab2/widgets/price_control.dart';
 import 'package:lab2/widgets/recipe_area.dart';
 import 'package:lab2/widgets/recipe_detail.dart';
@@ -26,6 +27,9 @@ Widget _controlPanel(context, {double width = 320}) {
     color: const Color.fromARGB(255, 193, 210, 218),
     child: Column(
       children: [
+
+        Logo(),
+
         Text('Receptsök'),
         Text('Sök efter recept'),
        
@@ -33,19 +37,10 @@ Widget _controlPanel(context, {double width = 320}) {
         KitchenControl(),
         Text("Svårighet"),
         DifficulyControl(),
-        Row(
-          children: [
-            Text("Pris"),
-            PriceControl()
-          ],
-        ),
-        Row(
-          children: [
-            Text("Tid"),
-            TimeControl()
-          ],
-        ),
-
+        Text("Pris"),
+        PriceControl(),
+        Text("Tid"),
+        TimeControl()
         ],)
     );
 }
