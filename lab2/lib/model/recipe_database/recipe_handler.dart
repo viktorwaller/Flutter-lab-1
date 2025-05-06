@@ -12,7 +12,7 @@ class RecipeHandler extends ChangeNotifier {
 
   final SearchFilter _filter = SearchFilter.withoutName(null, 0, null, 0, null);
 
-  RecipeHandler() {
+  RecipeHandler({required RecipeHandler Function(dynamic context) create}) {
     _loadRecipes();
   }
 
