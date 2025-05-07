@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lab2/app_theme.dart';
 import 'package:lab2/model/recipe_database/ingredient.dart';
 import 'package:lab2/util/cuisine.dart';
 import 'package:lab2/widgets/difficulty_control.dart';
@@ -17,7 +18,10 @@ class MainView extends StatelessWidget {
 @override
 Widget build(BuildContext context) {
    return Scaffold(
-     body: Row(children: [_controlPanel(context), RecipeArea()]),
+     body: Row(children: [
+      _controlPanel(context),
+     SizedBox(width: AppTheme.paddingSmall,),
+     RecipeArea()]),
    );
 }
 
@@ -29,6 +33,7 @@ Widget _controlPanel(context, {double width = 320}) {
       children: [
 
         Logo(),
+        Text("\n"),
 
         Text('Receptsök'),
         Text('Sök efter recept'),
