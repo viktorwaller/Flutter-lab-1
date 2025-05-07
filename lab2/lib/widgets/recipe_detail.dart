@@ -41,8 +41,15 @@ class RecipeDetail extends StatelessWidget {
         SizedBox(width: AppTheme.paddingMedium,),
         Expanded(
           child: Column(
+          
                 children: [
+                                      Align(
+                alignment: Alignment.topLeft,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
                     Text(recipe.name,style: AppTheme.largeHeading,),
+                    SizedBox(height: AppTheme.paddingMedium,),
                     Row(children: [
 
                       SizedBox(child: MainIngredient.icon(recipe.mainIngredient, width: 40),),
@@ -53,9 +60,19 @@ class RecipeDetail extends StatelessWidget {
                       SizedBox(width: AppTheme.paddingSmall,),
                       Text('${recipe.price.round()} kr'),
                     ]),
+
+
+
+                    SizedBox(height: AppTheme.paddingMediumSmall,),
                     Text(recipe.description,textAlign: TextAlign.start,),
+                    SizedBox(height: AppTheme.paddingMediumSmall,),
                     Text("Tilllagning", style: AppTheme.mediumHeading,),
+                    SizedBox(height: AppTheme.paddingMediumSmall,),
                     Text(recipe.instruction,textAlign: TextAlign.start,),
+                  ]
+                ),),
+
+                    
                     //Flexible(child: Text(recipe.instruction, softWrap: true,)),
                     IconButton(icon: Icon(Icons.close),
                     onPressed: () {
